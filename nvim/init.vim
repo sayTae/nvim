@@ -9,8 +9,9 @@
 :set mouse=a
 :set autochdir
 
-call plug#begin()
+call plug#begin('~/.config/nvim/plugged')
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
@@ -27,12 +28,11 @@ set encoding=UTF-8
 
 call plug#end()
 
+imap jk <Esc>
+inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
+
 nnoremap <C-t> :NERDTree<CR>
-
 map <F8> :TagbarToggle<CR>
-
-map <F10> oimport java.io.*;<CR>import java.util.*;<CR><CR>public class Main {<CR><CR>public static void main(String[] args) throws IOException {<CR>BufferedReader br = new BufferedReader(new InputStreamReader(System.in));<CR>StringBuilder sb = new StringBuilder(); StringTokenizer st;<CR><CR>int N = Integer.parseInt(br.readLine());<CR><CR>}<CR>}<CR><ESC>kkko
-
 
 " :set completeopt-=preview
 
@@ -73,7 +73,7 @@ func! CompileRun()
 		" exec !javac -classpath \".:bin\" -d ./bin %"
 	
 	if (&filetype == 'java')
-		exec "!javac -classpath \".:bin\" -d ./bin %"
+		exec "!javac -d ./bin %"
 
 	elseif &filetype == 'python'
 		exec "!python3 %"
