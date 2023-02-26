@@ -1,6 +1,6 @@
 # myNeovimSetup
 
-## my neovim setup code
+### my neovim setup code
 
 (+)
 
@@ -10,21 +10,21 @@ https://github.com/junegunn/vim-plug
 ```
 
 ### 2. node.js
-#### Linux
+Linux
 ```
 sudo apt install node.js
 ```
-#### Mac
+Mac
 ```
 brew install node
 ```
 
 ### 3. ctags
-#### Linux
+Linux
 ```
 sudo apt install exuberant-ctags
 ```
-#### Mac
+Mac
 ```
 brew install ctags
 ```
