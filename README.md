@@ -9,22 +9,22 @@
 https://github.com/junegunn/vim-plug
 ```
 
-## 2. node.js
-### Linux
+### 2. node.js
+#### Linux
 ```
 sudo apt install node.js
 ```
-### Mac
+#### Mac
 ```
 brew install node
 ```
 
-## 3. ctags
-### Linux
+### 3. ctags
+#### Linux
 ```
 sudo apt install exuberant-ctags
 ```
-### Mac
+#### Mac
 ```
 brew install ctags
 ```
