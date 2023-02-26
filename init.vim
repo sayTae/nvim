@@ -22,13 +22,22 @@ Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
 Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
-Plug 'https://github.com/glepnir/dashboard-nvim' " dash board-nvim
+Plug 'jiangmiao/auto-pairs' " auto pair <like ()>
 
 set encoding=UTF-8
 
 call plug#end()
 
+" Map QE to save changes and exit
+nnoremap <silent> QE :wq<CR>
+
+" Map QQ to exit without saving changes
+nnoremap <silent> QQ :q!<CR>
+
+" map jk to ESC 
 imap jk <Esc>
+
+" map Tab auto-complite
 inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
 
 nnoremap <C-t> :NERDTree<CR>
@@ -36,6 +45,7 @@ map <F8> :TagbarToggle<CR>
 
 " :set completeopt-=preview
 
+" colorscheme setting
 :colorscheme jellybeans
 
 let g:NERDTreeDirArrowExpandable="+"
@@ -64,16 +74,12 @@ map <F12> :call CompileRun()<CR>
 func! CompileRun()
 	exec "w"
 
-	" if (&filetype == 'java' && expand('%:t:r') == 'Main')
-		" exec !javac -classpath \".:bin\" -d ./bin %"
-		" exec !java -classpath \".:bin\" %:t:r"
-		" exec !java -cp %:p:h %:t:r"
 
-	" elseif (&filetype == 'java' && expand('%:t:r') != 'Main')
-		" exec !javac -classpath \".:bin\" -d ./bin %"
-	
-	if (&filetype == 'java')
+" CompileRun Func
+
+if (&filetype == 'java')
 		exec "!javac -d ./bin %"
+		exec "!java %:t:r"
 
 	elseif &filetype == 'python'
 		exec "!python3 %"
