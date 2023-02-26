@@ -1,4 +1,7 @@
-# Essential Packages
+# Essential Packages  
+  
+Please download the following package as required.  
+  
 [vim-Plug] -> "all plug-in"  
 [node.js] -> "coc"  
 [ctag] -> "tagbar"  
