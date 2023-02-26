@@ -1,7 +1,7 @@
 # Essential Packages
-[vim-Plug] -> Required for "all plug-in"  
-[node.js] -> Required for "coc"  
-[ctag] -> Required for "tagbar"  
+[vim-Plug] -> "all plug-in"  
+[node.js] -> "coc"  
+[ctag] -> "tagbar"  
 
 ## 1. vim-plug
 Reference Repository
