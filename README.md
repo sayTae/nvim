@@ -2,7 +2,7 @@
 [vim-Plug] -> Required for "all plug-in"  
 [node.js] -> Required for "coc"  
 [ctag] -> Required for "tagbar"  
-
+  
 ## 1. vim-plug
 Reference Repository
 ```
