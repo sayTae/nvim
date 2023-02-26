@@ -1,10 +1,9 @@
-# myNeovimSetup
+## Essential Packages
 
 ### 1. vim-plug
 ```
 https://github.com/junegunn/vim-plug
 ```
-
 ### 2. node.js
 Linux
 ```
@@ -14,7 +13,6 @@ Mac
 ```
 brew install node
 ```
-
 ### 3. ctags
 Linux
 ```
