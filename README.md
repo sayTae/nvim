@@ -1,9 +1,5 @@
 # myNeovimSetup
 
-### my neovim setup code
-
-(+)
-
 ### 1. vim-plug
 ```
 https://github.com/junegunn/vim-plug
