@@ -1,5 +1,8 @@
 # Essential Packages
 
+### [vim-Plug] -> Required for "all plug-in" operation
+### [node.js] -> Required for "coc" operation
+### [ctag] -> Required for "tagbar" operation
 
 ## 1. vim-plug
 ```
