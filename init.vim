@@ -23,6 +23,7 @@ Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
 Plug 'https://github.com/terryma/vim-multiple-cursors' " CTRL + N for multiple cursors
 Plug 'jiangmiao/auto-pairs' " auto pair <like ()>
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " fzf file manager
 
 set encoding=UTF-8
 
@@ -40,8 +41,9 @@ imap jk <Esc>
 " map Tab auto-complite
 inoremap <expr> <Tab> pumvisible() ? "\<C-y>" : "\<Tab>"
 
-nnoremap <C-t> :NERDTree<CR>
-map <F8> :TagbarToggle<CR>
+" NERDTree keymap
+nnoremap <silent> PP :NERDTree<CR>
+nnoremap <silent> LP :TagbarToggle<CR>
 
 " :set completeopt-=preview
 
@@ -78,8 +80,8 @@ func! CompileRun()
 " CompileRun Func
 
 if (&filetype == 'java')
-		exec "!javac -d ./bin %"
-		exec "!java %:t:r"
+		exec "!javac -d ../bin %"
+		exec "!java %:r"
 
 	elseif &filetype == 'python'
 		exec "!python3 %"
