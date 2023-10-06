@@ -1,0 +1,23 @@
+{
+	"background": "#141414",
+	"black": "#141414",
+	"blue": "#44474A",
+	"brightBlack": "#262626",
+	"brightBlue": "#5A5E62",
+	"brightCyan": "#8A989B",
+	"brightGreen": "#CCD88C",
+	"brightPurple": "#D0DC8E",
+	"brightRed": "#DE7C4C",
+	"brightWhite": "#FFFFD4",
+	"brightYellow": "#E2C47E",
+	"cursorColor": "#FFFFFF",
+	"cyan": "#778385",
+	"foreground": "#FFFFD4",
+	"green": "#AFB97A",
+	"name": "Twilight",
+	"purple": "#B4BE7C",
+	"red": "#C06D44",
+	"selectionBackground": "#313131",
+	"white": "#FFFFD4",
+	"yellow": "#C2A86C"
+}
