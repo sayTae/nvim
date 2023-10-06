@@ -5,7 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-#alias ls='ls --color=auto'
+# set default editer
+export EDITOR=nvim
+
 alias ls='lsd'
 alias ll='lsd -l'
 alias li='ls -i'
@@ -16,7 +18,7 @@ alias cls='source ~/.bashrc'
 
 alias S='sudo pacman -S'
 alias Ss='sudo pacman -Ss'
-alias Rs='sudo pacman -Rs'
+alias R='sudo pacman -Rns'
 
 alias grep='grep --color=auto'
 alias vi='nvim'
