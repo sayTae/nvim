@@ -8,26 +8,17 @@
 # set default editer
 export EDITOR=nvim
 
-alias ls='lsd'
-alias ll='lsd -l'
-alias li='ls -i'
-alias la='lsd -a'
-alias lla='lsd -la'
-alias lt='lsd --tree'
-alias cls='source ~/.bashrc'
+alias cls='source ~/.bash_profile'
 
 alias S='sudo pacman -S'
 alias Ss='sudo pacman -Ss'
 alias R='sudo pacman -Rns'
 
+alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias vi='nvim'
-alias mi='micro'
-alias nf='neofetch'
 
-alias goc='cd ~/CODE/c'
-alias goja='cd ~/CODE/java'
-alias goswap='cd ~/.local/state/nvim/swap'
+alias vi='nvim'
+alias nf='neofetch'
 
 PS1='\[\e[32m\]\u\[\e[0m\] \[\e[34m\]\w\[\e[0m\] '
 

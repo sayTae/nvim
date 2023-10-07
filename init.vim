@@ -11,6 +11,7 @@ syntax on
 call plug#begin('~/.config/nvim/plugged')
 " github settings
 Plug 'preservim/tagbar' " func tagbar
+Plug 'preservim/nerdtree' " NerdTree
 Plug 'tpope/vim-fugitive' " Git command on vim (:G)
 Plug 'tpope/vim-surround' " Bracket control (ys, cs, ds)
 Plug 'tpope/vim-commentary' " For Commenting (gcc & gc)
