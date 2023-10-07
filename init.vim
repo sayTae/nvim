@@ -22,13 +22,11 @@ Plug 'sayTae/say-Tree' " File tree-view
 Plug 'sayTae/say-Compile' " Compile custom setting
 call plug#end()
 
-" set underline color
+" statusLine configuraton
+set statusline=%<\ %F\ %r\ %=%l:%c:%b\ %{&ff}\ %{&enc}\ [%{line2byte(line('$'))}]\
 autocmd VimEnter * highlight StatusLine ctermfg=35 ctermbg=0
 autocmd InsertEnter * highlight StatusLine ctermfg=33 ctermbg=0
 autocmd InsertLeave * highlight StatusLine ctermfg=35 ctermbg=0
-" autocmd VimEnter * highlight StatusLine ctermfg=0 ctermbg=35
-" autocmd InsertEnter * highlight StatusLine ctermfg=0 ctermbg=33
-" autocmd InsertLeave * highlight StatusLine ctermfg=0 ctermbg=35
 
 " map <C-[> to ESC 
 inoremap <C-[> <ESC>
