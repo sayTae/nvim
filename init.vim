@@ -18,6 +18,8 @@ Plug 'tpope/vim-commentary' " For Commenting (gcc & gc)
 Plug 'bling/vim-bufferline' " Bufferline
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " finder (file & git)
+Plug 'jiangmiao/auto-pairs' " auto pair
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " LSP
 " custom settings
 Plug 'sayTae/say-Tree' " File tree-view
 Plug 'sayTae/say-Compile' " Compile custom setting
@@ -38,7 +40,7 @@ nnoremap <silent> <C-j> :bp<CR>
 nnoremap <silent> <C-k> :bn<CR>
 
 " map Tab auto-complite
-" inoremap <silent><expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
+inoremap <silent><expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
 " inoremap <silent> <Tab> <C-n>
 
 " fzf settings
