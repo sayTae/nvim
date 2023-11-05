@@ -10,7 +10,7 @@ end
 -- Packer.nivm initiallizing & load setting
 require('packer').startup(function()
 	
-	use {-- LSP package
+	use { -- LSP package
 		'williamboman/mason.nvim',
 		'williamboman/mason-lspconfig.nvim',
 		'williamboman/nvim-lsp-installer',
@@ -18,18 +18,16 @@ require('packer').startup(function()
 	}
 
 	use { -- download package 
-		'wbthomason/packer.nvim'
-		'preservim/tagbar'
-		'preservim/nerdtree'
-		'tpope/vim-fugitive'
-		'tpope/vim-surround'
-		'tpope/vim-commentary'
-		'bling/vim-bufferline'
-		'jiangmiao/auto-pairs'
+		'wbthomason/packer.nvim',
+		'preservim/tagbar',
+		'preservim/nerdtree',
+		'tpope/vim-fugitive',
+		'tpope/vim-surround',
+		'tpope/vim-commentary',
+		'bling/vim-bufferline',
+		'jiangmiao/auto-pairs',
 		{ 'junegunn/fzf', run = function() vim.fn['fzf#install']() end },
-		'junegunn/fzf.vim'
-		-- use 'mfussenegger/nvim-jdtls'
-	}
+		'junegunn/fzf.vim',
 	}
 
 	use { -- my package
@@ -76,7 +74,6 @@ vim.cmd('syntax on')
 -- Statusline configuration
 vim.cmd[[
     autocmd VimEnter * highlight StatusLine ctermfg=35 ctermbg=0
-	}
     autocmd InsertEnter  * highlight StatusLine ctermfg=33 ctermbg=0
     autocmd InsertLeave * highlight StatusLine ctermfg=35 ctermbg=0
 ]]
