@@ -1,34 +1,70 @@
 
--- Packer.nvim을 설치할 디렉토리 지정
+-- Packer.nvim directory
 local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 
--- Packer.nvim이 설치되어 있지 않으면 Packer를 설치
+-- if not Packer.nvim then install
  if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   vim.api.nvim_command('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
 end
 
--- Packer.nvim 초기화 및 설정 로딩
+-- Packer.nivm initiallizing & load setting
 require('packer').startup(function()
-    -- 플러그인 목록과 설정을 이곳에 추가
-	use 'wbthomason/packer.nvim'
-    use 'preservim/tagbar'
-    use 'preservim/nerdtree'
-    use 'tpope/vim-fugitive'
-    use 'tpope/vim-surround'
-    use 'tpope/vim-commentary'
-    use 'bling/vim-bufferline'
-	use 'neovim/nvim-lspconfig'
-    use 'jiangmiao/auto-pairs'
-    use { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end }
-    use 'junegunn/fzf.vim'
-    use 'sayTae/say-Tree'
-    use 'sayTae/say-Compile'
+	
+	use {-- LSP package
+		'williamboman/mason.nvim',
+		'williamboman/mason-lspconfig.nvim',
+		'williamboman/nvim-lsp-installer',
+		'neovim/nvim-lspconfig',
+	}
+
+	use { -- download package 
+		'wbthomason/packer.nvim'
+		'preservim/tagbar'
+		'preservim/nerdtree'
+		'tpope/vim-fugitive'
+		'tpope/vim-surround'
+		'tpope/vim-commentary'
+		'bling/vim-bufferline'
+		'jiangmiao/auto-pairs'
+		{ 'junegunn/fzf', run = function() vim.fn['fzf#install']() end },
+		'junegunn/fzf.vim'
+		-- use 'mfussenegger/nvim-jdtls'
+	}
+	}
+
+	use { -- my package
+		'sayTae/say-Tree',
+		'sayTae/say-Compile',
+	}
+
 end)
 
--- 이후에 나머지 설정과 키 매핑 등을 추가하세요
+-- LSP configuration
+require("nvim-lsp-installer").setup({
+    automatic_installation = true, -- automatically detect which servers to install
+    ui = {
+        icons = {
+
+            server_installed = "✓",
+            server_pending = "➜",
+            server_uninstalled = "✗"
+        }
+    }
+})
+
+-- setup mason
+require("mason").setup()
+require("mason-lspconfig").setup {
+    ensure_installed = { "jdtls", "pyright", "clangd" },
+}
+
+-- setup language
+require'lspconfig'.jdtls.setup{}
+require'lspconfig'.clangd.setup{}
 require'lspconfig'.pyright.setup{}
 
--- Set options
+
+-- Set Nvim options
 vim.o.number = true
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
@@ -40,7 +76,8 @@ vim.cmd('syntax on')
 -- Statusline configuration
 vim.cmd[[
     autocmd VimEnter * highlight StatusLine ctermfg=35 ctermbg=0
-    autocmd InsertEnter * highlight StatusLine ctermfg=33 ctermbg=0
+	}
+    autocmd InsertEnter  * highlight StatusLine ctermfg=33 ctermbg=0
     autocmd InsertLeave * highlight StatusLine ctermfg=35 ctermbg=0
 ]]
 
