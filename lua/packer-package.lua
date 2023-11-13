@@ -14,6 +14,7 @@ require('packer').startup(function()
             'hrsh7th/cmp-cmdline',
             'hrsh7th/nvim-cmp',
 			'L3MON4D3/LuaSnip',
+			'folke/lsp-colors.nvim',
         }
 
         use { -- Download package

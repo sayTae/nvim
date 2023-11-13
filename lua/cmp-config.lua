@@ -1,10 +1,12 @@
 
 local cmp = require'cmp'
 
-  cmp.setup({
-	sources = {
-        { name = 'nvim_lsp', max_item_count = 10 },
-        { name = 'buffer', max_item_count = 10 },
+cmp.setup({
+	formatting = {
+		format = function(entry, vim_item)
+			vim_item.abbr = string.sub(vim_item.abbr, 1, 20)
+			return vim_item
+		end
 	},
     snippet = {
       -- REQUIRED - you must specify a snippet engine
@@ -54,7 +56,6 @@ local cmp = require'cmp'
   })
 
   -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-
   cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
     sources = cmp.config.sources({

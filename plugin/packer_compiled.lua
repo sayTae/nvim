@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/home/sayTae/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/home/sayTae/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "/home/sayTae/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
