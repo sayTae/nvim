@@ -8,8 +8,6 @@
 # set default editer
 export EDITOR=nvim
 
-alias cls='source ~/.bash_profile'
-
 alias S='sudo pacman -S'
 alias Ss='sudo pacman -Ss'
 alias R='sudo pacman -Rns'
@@ -22,7 +20,6 @@ alias nf='neofetch'
 
 PS1='\[\e[32m\]\u\[\e[0m\] \[\e[34m\]\w\[\e[0m\] '
 
-clear
 echo "
     _____
    /     \\
@@ -34,3 +31,6 @@ echo "
        \m___m__|_|    \m_m_|   \mm_|    \""Totoros"\"
 
 "
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

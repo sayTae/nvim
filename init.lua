@@ -1,13 +1,13 @@
 
 -- Set Nvim options
 vim.o.number = true
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
 vim.o.autochdir = true
 vim.o.autoindent = true
-vim.o.shiftwidth = 4
+vim.o.shiftwidth = 2
 vim.o.pumheight = 7
-vim.o.syntax = 1
+vim.o.syntax = 'enable'
 -- vim.o.ttimeoutlen = 0
 
 -- Load settings
