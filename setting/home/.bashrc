@@ -12,11 +12,14 @@ alias S='sudo pacman -S'
 alias Ss='sudo pacman -Ss'
 alias R='sudo pacman -Rns'
 
-alias ls='ls --color=auto'
+alias ls='lsd --color=auto'
+alias ll='lsd -l --color=auto'
+alias la='lsd -la --color=auto'
 alias grep='grep --color=auto'
 
 alias vi='nvim'
 alias nf='neofetch'
+alias tmux='curl -s https://ipinfo.io?token=54640b2b60778f > ~/.tmux_IP_info.json & tmux'
 
 PS1='\[\e[32m\]\u\[\e[0m\] \[\e[34m\]\w\[\e[0m\] '
 

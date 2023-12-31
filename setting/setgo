@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp home/.bash_profile home/.bashrc home/.tmux.conf ~
+cp shell/cls /usr/local/bin
