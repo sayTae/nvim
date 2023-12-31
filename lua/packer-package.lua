@@ -13,8 +13,8 @@ require('packer').startup(function()
             'hrsh7th/cmp-path',
             'hrsh7th/cmp-cmdline',
             'hrsh7th/nvim-cmp',
-			'L3MON4D3/LuaSnip',
-			'folke/lsp-colors.nvim',
+						'L3MON4D3/LuaSnip',
+						'folke/lsp-colors.nvim',
         }
 
         use { -- Download package
@@ -26,6 +26,7 @@ require('packer').startup(function()
             'tpope/vim-commentary',
             'bling/vim-bufferline',
             'jiangmiao/auto-pairs',
+						'ryanoasis/vim-devicons',
             { 'junegunn/fzf', run = function() vim.fn['fzf#install']() end },
             'junegunn/fzf.vim',
         }
