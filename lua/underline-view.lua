@@ -7,4 +7,4 @@ vim.cmd[[
 ]]
 
 -- Underline information
-vim.o.statusline = '%< %F %r %= %l:%c:%b %{&ff} %{&enc} [' .. vim.fn.line2byte(vim.fn.line('$')) .. '].'
+vim.o.statusline = '%< %F %r %= %l:%c:%b %{&ff} %{&enc} '

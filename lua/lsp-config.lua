@@ -1,5 +1,5 @@
 
-local servers = { 'jdtls', 'clangd', 'pyright' }
+local servers = { 'lua_ls', 'jdtls', 'clangd', 'pyright' }
 
 -- Mason settings
 require("mason").setup()

@@ -12,9 +12,9 @@ alias S='sudo pacman -S'
 alias Ss='sudo pacman -Ss'
 alias R='sudo pacman -Rns'
 
-alias ls='lsd --color=auto'
-alias ll='lsd -l --color=auto'
-alias la='lsd -la --color=auto'
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -la'
 alias grep='grep --color=auto'
 
 alias vi='nvim'
@@ -22,6 +22,25 @@ alias nf='neofetch'
 alias tmux='curl -s https://ipinfo.io?token=54640b2b60778f > ~/.tmux_IP_info.json & tmux'
 
 PS1='\[\e[32m\]\u\[\e[0m\] \[\e[34m\]\w\[\e[0m\] '
+
+# fzf-settings
+fzf_vi() {
+    local selected_file
+    selected_file=$(find ~/ | fzf --height 17)
+    
+    if [ -n "$selected_file" ]; then
+        vi "$selected_file"
+    else
+        echo "Cancelled"
+    fi
+}
+
+alias ff=fzf_vi
+
+export FZF_DEFAULT_OPTS='
+  --preview "head -n 15 {} "
+	--reverse
+'
 
 echo "
     _____

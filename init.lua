@@ -14,6 +14,7 @@ vim.o.syntax = 'enable'
 require('install-packer')
 require('packer-package')
 require('lsp-config')
+require('rust-lsp-config')
 require('cmp-config')
 require('key-mappings')
 require('underline-view')
