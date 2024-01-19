@@ -11,7 +11,7 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- Set leader to back slash.
+-- Set leader to back-slash.
 vim.g.mapleader = '\\'
 
 -- FZF size
@@ -35,15 +35,26 @@ map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
 
 -- Git
-map('n', '<Leader>gg', ':Git')
+map('n', '<Leader>gg', ':Git<CR>')
+map('n', '<Leader>gw', ':Gwrite<CR>')
+map('n', '<Leader>gr', ':Git reset %<CR>')
+map('n', '<Leader>gc', ':Git commit -m \'\'<Left>')
+map('n', '<Leader>ga', ':Git commit --amend<CR>')
+map('n', '<Leader>gd', ':Gvdiffsplit<CR>')
 
 -- FZF
 map('n', '<Leader>ff', ':Files ~/<CR>')
 map('n', '<Leader>fi', ':Files ../<CR>')
+map('n', '<Leader>gf', ':GitFiles<CR>')
 
 -- Explore
 map('n', '<Leader>tb', ':Tagbar<CR>')
 map('n', '<Leader>nt', ':NERDTree<CR>')
+
+-- :wq
+map('n', '<Leader>w', ':w<CR>')
+map('n', '<Leader>q', ':q<CR>')
+map('n', '<Leader>x', ':wq<CR>')
 
 -- say-Compile setting
 map('n', '<Leader>mm', ':call CompileRun')
