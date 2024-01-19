@@ -39,7 +39,7 @@ map('n', '<Leader>gg', ':Git<CR>')
 map('n', '<Leader>gw', ':Gwrite<CR>')
 map('n', '<Leader>gr', ':Git reset %<CR>')
 map('n', '<Leader>gc', ':Git commit -m \'\'<Left>')
-map('n', '<Leader>ga', ':Git commit --amend<CR>')
+map('n', '<Leader>ga', ':Git commit --amend -m \'\'<Left>')
 map('n', '<Leader>gd', ':Gvdiffsplit<CR>')
 
 -- FZF
