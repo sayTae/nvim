@@ -12,7 +12,6 @@ vim.o.autoindent = true
 vim.o.shiftwidth = 4
 vim.o.pumheight = 7
 vim.o.syntax = 'enable'
--- vim.o.ttimeoutlen = 0
 
 --  ###############################\
 --- #		Load Nvim options 	   # O>
@@ -20,7 +19,6 @@ vim.o.syntax = 'enable'
 
 require('install-packer')
 require('packer-package')
-require('lsp-config')
-require('cmp-config')
 require('key-mappings')
 require('underline-view')
+require("hardtime").setup()
