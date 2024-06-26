@@ -58,6 +58,7 @@ map('n', '<Leader>sc', ':%s\'\'gc<Left><Left><Left>')
 map('n', '<Leader>fi', ':Files ~/<CR>')
 map('n', '<Leader>ff', ':Files ../<CR>')
 
+-- Colons
 map('i', ';;', '<Esc>A;')
 map('i', ',,', '<Esc>la, ')
 
