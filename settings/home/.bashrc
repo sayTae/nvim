@@ -19,7 +19,13 @@ alias grep='grep --color=auto'
 
 alias vi='nvim'
 alias nf='neofetch'
-alias tmux='curl -s https://ipinfo.io?token=54640b2b60778f > ~/.tmux_IP_info.json & tmux'
+
+# tmux
+update_ip_info() {
+  curl -s 'https://ipinfo.io?token=54640b2b60778f' > ~/.tmux_IP_info.json
+}
+
+alias tmux-reload='update_ip_info && tmux'
 
 PS1='\[\e[32m\]\u\[\e[0m\] \[\e[34m\]\w\[\e[0m\] '
 
