@@ -11,18 +11,6 @@ require('packer').startup(function()
 		'wbthomason/packer.nvim'
 		}
 
-		use { -- LSP package
-             'williamboman/mason.nvim',
-             'williamboman/mason-lspconfig.nvim',
-             'neovim/nvim-lspconfig',
-             'hrsh7th/cmp-nvim-lsp',
-             'hrsh7th/cmp-buffer',
-             'hrsh7th/cmp-path',
-             'hrsh7th/cmp-cmdline',
-             'hrsh7th/nvim-cmp',
-			 'folke/lsp-colors.nvim',
-        }
-
         use { -- Download package
 			'preservim/nerdtree',
             'preservim/tagbar',
@@ -33,7 +21,6 @@ require('packer').startup(function()
 			'm4xshen/hardtime.nvim',
 			'nvim-lua/plenary.nvim',
 			'ryanoasis/vim-devicons',
-			'Mofiqul/vscode.nvim',
 			"L3MON4D3/LuaSnip",
 		}
 
