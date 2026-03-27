@@ -11,8 +11,12 @@ vim.o.autochdir = true
 vim.o.autoindent = true
 vim.o.shiftwidth = 4
 vim.o.pumheight = 7
+vim.o.pumwidth = 10
 vim.o.syntax = 'enable'
-
+vim.opt.inccommand = "split"
+vim.cmd('colorscheme evening')
+-- vim.cmd('colorscheme github_dark')
+-- vim.cmd('highlight Normal guibg=NONE')
 
 --  ###############################\
 --- #		Load Nvim options 	   # O>
@@ -20,8 +24,31 @@ vim.o.syntax = 'enable'
 
 require('packer/install-packer')
 require('packer/packer-packages')
-require('snippets/snippets')
+-- require("hardtime").setup()
+require('snippets/init')
 require('tree-sitter')
 require('key-mappings')
 require('underline-view')
-require("hardtime").setup()
+require("LSP/settings")
+
+--  ###############################\
+--- #		Other Nvim options 	   # O>
+--  ###############################/
+
+vim.cmd([[
+  au BufRead,BufNewFile *.memo set filetype=memo
+]])
+
+vim.api.nvim_create_autocmd("InsertEnter", {
+  pattern = "*.memo",
+  callback = function()
+    os.execute("fcitx5-remote -o")
+  end,
+})
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+  pattern = "*.memo",
+  callback = function()
+    os.execute("fcitx5-remote -c")
+  end,
+})
