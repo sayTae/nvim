@@ -4,7 +4,7 @@
 --  ###############################/
 
 vim.o.number = true
-vim.o.relativenumber = true
+-- vim.o.relativenumber = true
 vim.o.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.autochdir = true
@@ -24,12 +24,12 @@ vim.cmd('colorscheme evening')
 
 require('packer/install-packer')
 require('packer/packer-packages')
--- require("hardtime").setup()
 require('snippets/init')
-require('tree-sitter')
 require('key-mappings')
 require('underline-view')
 require("LSP/settings")
+-- require('tree-sitter')
+-- require("hardtime").setup()
 
 --  ###############################\
 --- #		Other Nvim options 	   # O>

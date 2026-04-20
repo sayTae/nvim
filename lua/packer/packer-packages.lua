@@ -40,11 +40,12 @@ require('packer').startup(function()
 		run = function() vim.fn["mkdp#util#install"]() end,
 	})
 
-	use { -- tree-sitter
-		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate',
-		config = function() require('tree-sitter').setup() end,
-	}
+	-- use { -- tree-sitter
+	-- 	branch = 'main',
+	-- 	'nvim-treesitter/nvim-treesitter',
+	-- 	run = ':TSUpdate',
+	-- 	config = function() require('tree-sitter').setup() end,
+	-- }
 
 	use { -- autopair
 		"windwp/nvim-autopairs",
